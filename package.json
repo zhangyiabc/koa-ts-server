@@ -8,8 +8,7 @@
     "start": "node ./src/index",
     "build": "tsc",
     "doc": "apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json",
-    "start:dist": "node -r ./tsconfig-paths-bootstrap.js dist/index.js",
-    "tsc": "tsc --init"
+    "start:dist": "node -r ./tsconfig-paths-bootstrap.js dist/index.js"
   },
   "author": "",
   "license": "ISC",
