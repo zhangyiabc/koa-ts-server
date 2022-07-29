@@ -1,0 +1,9 @@
+{
+  "watch": ["src"],
+  "ext": "ts",
+  "ignore": ["*.test.ts", "*.log"],
+  "delay": "3",
+  "execMap": {
+    "ts": "node -r ts-node/register -r tsconfig-paths/register"
+  }
+}

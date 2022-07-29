@@ -1,0 +1,51 @@
+{
+  "name": "koa-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": " apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json && nodemon ./src/index ",
+    "start": "node ./src/index",
+    "build": "tsc",
+    "doc": "apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json",
+    "start:dist": "node -r ./tsconfig-paths-bootstrap.js dist/index.js",
+    "tsc": "tsc --init"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-log4": "^2.3.2",
+    "koa-router": "^11.0.1",
+    "koa-static": "^5.0.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.5",
+    "@types/koa-bodyparser": "^4.3.7",
+    "@types/koa-log4": "^2.3.3",
+    "@types/koa-router": "^7.4.4",
+    "@types/koa-static": "^4.0.2",
+    "@types/node": "^18.0.6",
+    "@types/validator": "^13.7.4",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.31.0",
+    "@typescript-eslint/parser": "^3.10.1",
+    "apidoc": "^0.52.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^8.0.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-no-null": "^1.0.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.0.0",
+    "typescript": "^4.7.4",
+    "typescript-eslint": "0.0.1-alpha.0",
+    "validate.js": "^0.13.1"
+  }
+}
