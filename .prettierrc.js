@@ -1,7 +1,12 @@
-module.exports = {
-  printWidth: 160,
-  singleQuote: true,
-  semi: false,
-  endOfLine: 'lf',
-  trailingComma: 'es5',
-}
+module.exports =  {
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": false,
+  "jsxBracketSameLine": true,
+  "arrowParens": "avoid",
+  "insertPragma": true,
+  "tabWidth": 4,
+  "useTabs": false  
+};

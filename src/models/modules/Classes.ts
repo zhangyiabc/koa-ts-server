@@ -1,4 +1,4 @@
-import { CreationOptional, DataTypes, Model, Optional } from 'sequelize'
+import { CreationOptional, DataTypes, Model, Optional, Identifier } from 'sequelize'
 import { sequelize } from '../db'
 interface ClassAttributes {
   id: number;
@@ -8,8 +8,6 @@ interface ClassAttributes {
   updatedAt?: Date;
   deletedAt?: Date;
 }
-
-
 
 export interface ClassInput extends Optional<ClassAttributes, 'id' | 'name' > {}
 // export interface ClassOuput extends Required<ClassAttributes> {}

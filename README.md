@@ -22,7 +22,7 @@
 若想查看更多写法， 请参考apidoc文档[https://apidocjs.com/](https://apidocjs.com/)
 
 
-``` json
+```
 koa-ts-server
 ├─ .eslintignore
 ├─ .eslintrc.js

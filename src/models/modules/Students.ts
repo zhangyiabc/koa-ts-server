@@ -14,7 +14,7 @@ interface StudentAttributes {
 export interface StudentInput extends Pick<StudentAttributes, 'name' | 'imgUrl' | 'sex'> {}
 export interface StudentOutput extends StudentAttributes {}
 
-class Student extends Model<StudentAttributes, StudentInput> implements StudentAttributes  {
+class Student extends Model<StudentAttributes, StudentInput> implements StudentAttributes {
   declare id: CreationOptional<number>
   public name!: string
   declare sex: '0' | '1'

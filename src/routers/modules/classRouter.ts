@@ -1,5 +1,5 @@
 import Router, { RouterContext } from 'koa-router'
-import { addClass } from '@/services/modules/Classes'
+import { addClass, deleteClass } from '@/services/modules/Classes'
 
 const router: Router = new Router()
 /**
@@ -38,6 +38,35 @@ const router: Router = new Router()
 router.post('/', async (ctx: RouterContext, next: () => Promise<void> ) => {
   // const res = await addClass(ctx.request.)
   const res = await addClass(ctx.request.body)
+  ctx.body = res
+  await next()
+})
+
+/**
+ * @api {delete} /api/class 删除班级
+ * @apiName 删除班级
+ * @apiGroup class
+ * @apiVersion  1.0.0
+ * @apiParamExample  {json} Request-Example:
+ * {
+ *     id: 1
+ * }
+ * 
+ * @apiSuccess {Number} code 200
+ * @apiSuccess {String} msg  success
+ * @apiSuccess {Object} data 
+ * @apiError REGISTER_FAILURE The register failure.
+ * @apiSuccessExample {json} Success-Response:
+ * 
+ * {
+ *  code: 200,
+ *  msg: "success"
+ *  data: ''
+ * 
+ * 
+ */
+router.delete('/', async (ctx: RouterContext, next: () => Promise<void>) => {
+  const res = await deleteClass(ctx.request.body.id)
   ctx.body = res
   await next()
 })

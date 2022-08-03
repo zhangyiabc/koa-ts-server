@@ -5,10 +5,22 @@
   "main": "index.js",
   "scripts": {
     "dev": "apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json && nodemon ./src/index ",
-    "start": "node ./src/index",
     "build": "tsc",
+    "lint": "eslint src --fix --ext .ts",
     "doc": "apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json",
+    "start": "node ./src/index",
     "start:dist": "node -r ./tsconfig-paths-bootstrap.js dist/index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.{.ts,.tsx}": [
+      "eslint",
+      "git add"
+    ]
   },
   "author": "",
   "license": "ISC",
