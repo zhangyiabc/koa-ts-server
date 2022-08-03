@@ -12,6 +12,9 @@ import routerContainer from './service'
 app.use(staticFileMiddleware('/apidoc', path.resolve(__dirname + '../../..' + '/public')))
 app.use(staticFileMiddleware('/assets', path.resolve(__dirname + '../../..' + '/public/apidoc')))
 
+
+
+
 // 日志记录
 app.use(loggerMiddleware)
 
@@ -19,10 +22,6 @@ app.use(loggerMiddleware)
 app.use(bodyParser())
 
 const routers = routerContainer()
-
-
-
-
 
 // 各种api
 app.use(routers.routes()).use(routers.allowedMethods())
