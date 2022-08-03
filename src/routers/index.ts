@@ -20,6 +20,10 @@ app.use(bodyParser())
 
 const routers = routerContainer()
 
+
+
+
+
 // 各种api
 app.use(routers.routes()).use(routers.allowedMethods())
 
