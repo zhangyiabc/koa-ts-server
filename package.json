@@ -13,11 +13,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{.ts,.tsx}": [
+    "*.{.ts}": [
       "eslint",
       "git add"
     ]
