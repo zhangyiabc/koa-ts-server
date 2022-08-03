@@ -6,11 +6,11 @@
   "scripts": {
     "dev": "apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json && nodemon ./src/index ",
     "build": "tsc",
-    "prepare": "husky install",
     "lint": "eslint src --fix --ext .ts",
     "doc": "apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json",
     "start": "node ./src/index",
-    "start:dist": "node -r ./tsconfig-paths-bootstrap.js dist/index.js"
+    "start:dist": "node -r ./tsconfig-paths-bootstrap.js dist/index.js",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",

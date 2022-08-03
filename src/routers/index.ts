@@ -13,11 +13,6 @@ app.use(staticFileMiddleware('/apidoc', path.resolve(__dirname + '../../..' + '/
 app.use(staticFileMiddleware('/assets', path.resolve(__dirname + '../../..' + '/public/apidoc')))
 
 
-
-
-
-
-
 // 日志记录
 app.use(loggerMiddleware)
 

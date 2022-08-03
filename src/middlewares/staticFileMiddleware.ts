@@ -7,16 +7,16 @@ import {resolve} from 'path'
  * @param dirname 文件路径
  * @returns 
  */
-export default function (path: string, dirname: string): Middleware<{}> {
+export default function (path: string, dirname: string): Middleware<{any: any}> {
   return async function (ctx, next) {
     let done = ''
-    let opts: any = {}
+    const opts: any = {}
     opts.index = 'index.html'
     if (ctx.path.indexOf(path) > -1 && ctx.method === 'GET') {
       
       opts.root = resolve(dirname)
       try {
-        done =  await send(ctx, ctx.path, opts)
+        done = await send(ctx, ctx.path, opts)
       } catch (error) {
         console.log(error)
       }
