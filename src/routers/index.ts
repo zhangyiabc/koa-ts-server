@@ -17,6 +17,7 @@ app.use(staticFileMiddleware('/assets', path.resolve(__dirname + '../../..' + '/
 
 
 
+
 // 日志记录
 app.use(loggerMiddleware)
 

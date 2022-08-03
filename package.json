@@ -6,21 +6,11 @@
   "scripts": {
     "dev": "apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json && nodemon ./src/index ",
     "build": "tsc",
+    "prepare": "husky install",
     "lint": "eslint src --fix --ext .ts",
     "doc": "apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json",
     "start": "node ./src/index",
     "start:dist": "node -r ./tsconfig-paths-bootstrap.js dist/index.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{.ts}": [
-      "eslint",
-      "git add"
-    ]
   },
   "author": "",
   "license": "ISC",
@@ -51,7 +41,7 @@
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1",
+    "husky": "^7.0.4",
     "lint-staged": "^13.0.3",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
