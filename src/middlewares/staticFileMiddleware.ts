@@ -10,7 +10,7 @@ import {resolve} from 'path'
 export default function (path: string, dirname: string): Middleware<{any: any}> {
   return async function (ctx, next) {
     let done = ''
-    const opts: any = {}
+    const opts: { [key: string]: any} = {}
     opts.index = 'index.html'
     if (ctx.path.indexOf(path) > -1 && ctx.method === 'GET') {
       

@@ -24,6 +24,7 @@ module.exports = {
     'max-len': ['error', { code: 160 }],
     // 'no-plusplus': 0,
     // 'arrow-parens': ['error', 'as-needed'],
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-empty-interface': 0,
     // '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],

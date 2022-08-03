@@ -13,6 +13,8 @@
 ## npm run start:dist
 运行dist中的文件
 
+## npm run lint
+代码检查
 
 ## npm run doc
 生成接口文档
@@ -24,11 +26,12 @@
 
 ```
 koa-ts-server
-├─ .eslintignore
-├─ .eslintrc.js
+├─ .eslintignore // eslint相关
+├─ .eslintrc.js  // eslint相关
 ├─ .gitignore
 ├─ .prettierrc
 ├─ .prettierrc.js
+├─ .husky  husk 配置
 ├─ apidoc.json // 接口文档配置
 ├─ nodemon.json // nodemon配置
 ├─ package-lock.json
