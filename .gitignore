@@ -8,7 +8,7 @@ src/logs/default
 src/logs/sql
 # dist/*/**
 dist
-public
+public/**
 /.pnp
 .pnp.js
 
