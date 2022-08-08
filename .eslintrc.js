@@ -17,7 +17,7 @@ module.exports = {
 
   rules: {
     // 'comma-dangle': ['error', 'only-multiline'],
-    // '@typescript-eslint/semi': ['error', 'never'],
+    '@typescript-eslint/semi': ['error', 'never'],
     'no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 1 }],
     'no-multi-spaces': ['error', { ignoreEOLComments: true }],
     'object-curly-newline': ['error', { 'consistent': true }],
@@ -27,8 +27,9 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-empty-interface': 0,
+    '@typescript-eslint/no-var-requires': 'off',
     // '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
-    // 'import/prefer-default-export': 0,
+    'import/prefer-default-export': 0,
     // 'no-restricted-syntax': 0
   }
 }

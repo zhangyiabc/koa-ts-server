@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json && nodemon ./src/index ",
     "build": "tsc",
-    "lint": "eslint src --fix --ext .ts",
+    "lint": "eslint src --fix --ext .ts  --ext .js",
     "doc": "apidoc -i src/routers/ -o public/apidoc/ -c apidoc.json",
     "start": "node ./src/index",
     "start:dist": "node -r ./tsconfig-paths-bootstrap.js dist/index.js",

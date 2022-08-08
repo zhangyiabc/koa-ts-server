@@ -1,4 +1,4 @@
-import { Middleware } from "koa";
+import { Middleware } from "koa"
 import send from 'koa-send'
 import {resolve} from 'path'
 /**
