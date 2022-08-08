@@ -5,13 +5,15 @@ interface StudentAttributes {
   id: number;
   name: string;
   imgUrl: string
+  age: number
   sex: '0' | '1'
   createdAt?: Date;
   updatedAt?: Date;
   deletedAt?: Date;
+  classId: number
 }
 
-export interface StudentInput extends Pick<StudentAttributes, 'name' | 'imgUrl' | 'sex'> {}
+export interface StudentInput extends Pick<StudentAttributes,'classId' | 'age' | 'name' | 'imgUrl' | 'sex'> {}
 export interface StudentOutput extends StudentAttributes {}
 
 class Student extends Model<StudentAttributes, StudentInput> implements StudentAttributes {
@@ -19,6 +21,8 @@ class Student extends Model<StudentAttributes, StudentInput> implements StudentA
   public name!: string
   declare sex: '0' | '1'
   declare imgUrl: string;
+  declare age: number
+  declare classId: number;
   // timestamps!
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
@@ -30,6 +34,14 @@ Student.init({
     type: DataTypes.INTEGER.UNSIGNED,
     autoIncrement: true,
     primaryKey: true,
+  },
+  age: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    validate: {
+      min: 3,
+      max: 80
+    }
   },
   name: {
     type: DataTypes.STRING,
@@ -46,8 +58,11 @@ Student.init({
   imgUrl: {
     type: DataTypes.STRING,
     allowNull: false,
+  },
+  classId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
   }
-
 },{
   timestamps: true,
   sequelize: sequelize,
