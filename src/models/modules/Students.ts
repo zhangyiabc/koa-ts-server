@@ -10,10 +10,9 @@ interface StudentAttributes {
   createdAt?: Date;
   updatedAt?: Date;
   deletedAt?: Date;
-  classId: number
 }
 
-export interface StudentInput extends Pick<StudentAttributes,'classId' | 'age' | 'name' | 'imgUrl' | 'sex'> {}
+export interface StudentInput extends Pick<StudentAttributes, 'age' | 'name' | 'imgUrl' | 'sex'> {}
 export interface StudentOutput extends StudentAttributes {}
 
 class Student extends Model<StudentAttributes, StudentInput> implements StudentAttributes {
@@ -22,8 +21,6 @@ class Student extends Model<StudentAttributes, StudentInput> implements StudentA
   declare sex: '0' | '1'
   declare imgUrl: string;
   declare age: number
-  declare classId: number;
-  // timestamps!
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
   public readonly deletedAt!: Date;
@@ -59,10 +56,10 @@ Student.init({
     type: DataTypes.STRING,
     allowNull: false,
   },
-  classId: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  }
+  // classId: {
+  //   type: DataTypes.INTEGER,
+  //   allowNull: false,
+  // }
 },{
   timestamps: true,
   sequelize: sequelize,

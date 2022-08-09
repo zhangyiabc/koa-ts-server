@@ -3,4 +3,4 @@ import '@/services/index'
 import './routers/index'
 // console.log(process.env.NODE_ENV )
 // import '@/test/class.test'
-import '@/test/student.test'
+// import '@/test/student.test'

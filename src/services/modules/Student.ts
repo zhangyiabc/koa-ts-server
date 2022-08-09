@@ -51,7 +51,7 @@ const addStudent = async (addStudentBody: StudentInput): Promise<MessageConfig<S
   return {
     msg: 'success',
     code: '1001',
-    data: res
+    data: res.toJSON()
   }
 }
 

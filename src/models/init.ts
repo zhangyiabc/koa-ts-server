@@ -1,2 +1,2 @@
 import './relation'
-// import './sync'
+import './sync'
