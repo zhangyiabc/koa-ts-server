@@ -11,13 +11,15 @@ import routerContainer from './service'
 // 静态文件托管
 app.use(staticFileMiddleware('/apidoc', path.resolve(__dirname + '../../..' + '/public')))
 app.use(staticFileMiddleware('/assets', path.resolve(__dirname + '../../..' + '/public/apidoc')))
-
+app.use(staticFileMiddleware('/test', path.resolve(__dirname + '../../..' + '/public')))
 
 // 日志记录
 app.use(loggerMiddleware)
 
 // 解析post请求参数
-app.use(bodyParser())
+app.use(bodyParser({
+  enableTypes: ['json', 'text']
+}))
 
 const routers = routerContainer()
 

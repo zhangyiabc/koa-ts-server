@@ -89,7 +89,24 @@ const deleteClass = async (classId: Pick<ClassInput, 'id'>): Promise<MessageConf
 
 }
 
+const getClassDetail = async (classId: number): Promise<MessageConfig<any>> =>{
+  const res = await Classes.findByPk(classId)
+  if (res) {
+    return {
+      code: '1001',
+      msg: 'success',
+      data: res?.toJSON()
+    }
+  }
+  return {
+    code: '1003',
+    msg: 'success',
+    data: ''
+  }
+}
+
 export {
   addClass,
+  getClassDetail,
   deleteClass
 }

@@ -21,6 +21,7 @@
     "koa-router": "^11.0.1",
     "koa-static": "^5.0.0",
     "mysql2": "^2.3.3",
+    "redis": "^4.3.0",
     "sequelize": "^6.21.3"
   },
   "devDependencies": {

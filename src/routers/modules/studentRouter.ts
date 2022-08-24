@@ -16,7 +16,6 @@ const router: Router = new Router()
  *      age: 18,
  *     imgUrl: 'www.baidu.com',
  *     classId: 8
- *     
  * }
  * 
  * @apiSuccess {Number} code 200
