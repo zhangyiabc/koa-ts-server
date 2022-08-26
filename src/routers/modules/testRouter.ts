@@ -5,6 +5,9 @@ const router: Router = new Router()
 
 router.post('/send', async (ctx: RouterContext, next: () => Promise<void>) => {
   console.log(7, ctx.request.body)
+  ctx.body = {
+    name: 'zhangyi'
+  }
   // setTimeout(() => {
   //   console.log(ctx.req)
   // }, 500)

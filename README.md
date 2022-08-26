@@ -5,7 +5,6 @@
 ## npm run dev
 生成接口文档，并启动`nodemon`监听文件改变
 
-
 ## npm run build
 将ts代码编译成js
 
@@ -51,3 +50,5 @@ koa-ts-server
 └─ tsconfig.json
 
 ```
+
+> 日志文件存放， logs/* 五天删除一次 最大字节数1024 * 50
