@@ -1,6 +1,6 @@
 import {koaLogger} from "koa-log4"
 import { RouterContext } from 'koa-router'
-import { apiLogger } from "../config/logger"
+import { apiLogger } from "@/config/logger"
 
 export default koaLogger(apiLogger, {
   level: "auto",

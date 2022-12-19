@@ -77,7 +77,10 @@ router.post('/', async (ctx: RouterContext, next: () => Promise<void>) => {
  * 
  */
 router.get('/', async (ctx: RouterContext, next: () => Promise<void>) => {
+  console.log('获取所有学生')
   const res = await getAllStudent(ctx.request.query)
   ctx.body = res
   await next()
 })
+
+export default router

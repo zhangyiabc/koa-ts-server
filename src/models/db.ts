@@ -7,7 +7,6 @@ import { dbConfig } from '../config/db'
 const sequelize = new Sequelize({
   ...dbConfig,
   logging: (msg) => {
-    // console.log(msg)
     sqlLogger.debug(msg)
   }
 })

@@ -3,7 +3,7 @@ import ClassModal from "@/models/modules/Classes"
 import validate from "validate.js"
 // 拓展class外键
 validate.validators.ClassIsExist = async (value: number) => {
-  console.log(value)
+  // console.log(value)
   if (!value) {
     return 'class id must have'
   }
