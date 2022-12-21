@@ -14,3 +14,12 @@ const sequelize = new Sequelize({
 export {
   sequelize
 }
+
+import mongoose from 'mongoose'
+
+mongoose.connect('mongodb://121.40.140.122:27017/blog').then(() => {
+  console.log('success')
+}).catch(err => {
+  console.log('报错了')
+  console.log(err)
+})

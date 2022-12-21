@@ -4,6 +4,7 @@ import { Middleware } from "koa"
 import { createClient } from 'redis'
 import { redisLogger } from '@/config/logger'
 const client = createClient()
+const whiteCode = ['1001', '200']
 export default function (outTime: number): Middleware<{any: any}> {
   return async (ctx: RouterContext, next: () => Promise<void>) => {
     const key = ctx.request.url
@@ -20,7 +21,7 @@ export default function (outTime: number): Middleware<{any: any}> {
         ctx.body = result
       } else {
         await next()
-        if (ctx.body && (ctx.body as any).code === '1001') {
+        if (ctx.body && whiteCode.includes((ctx.body as any).code)) {
           await client.setEx(key, outTime, JSON.stringify(ctx.body))
           redisLogger.info(`redis success set key[${key}] value[${JSON.stringify(ctx.body)}] EXTime[${outTime}]`)
         }
